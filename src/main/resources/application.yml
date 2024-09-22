@@ -1,0 +1,24 @@
+#I only have 2gb of ram so it was needed longer timeout period
+spring:
+  web:
+    client:
+      connection-timeout: 60000
+      read-timeout: 600000
+  application:
+    name: sysbackend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bootcamp
+    username: 
+    password: 
+  jpa:
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    defer-datasource-initialization: true
+server:
+  port: 8080
+jwt:
+  secretKey: "0bd5a2427d5014148de3eee27bcbe07bb487efd48ec0d4cfee5b5d881c74b4fa"
+  expiration: 3600000
+
